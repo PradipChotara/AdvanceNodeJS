@@ -6,6 +6,7 @@
 npm install
 ```
 ---
+
 ## Worker Threads
  - can run on diffrent CPU core then main thread
 
@@ -27,7 +28,7 @@ npm install
 
 ---
 
-# Clusters in Node.js
+# Clusters
 
 Clusters in Node.js are a mechanism for utilizing the capabilities of multi-core systems to improve performance and concurrency in applications. They enable the creation of multiple child processes (workers) that share the same server port, allowing Node.js to handle more incoming connections and distribute the workload across CPU cores effectively.
 
@@ -49,4 +50,36 @@ Clusters in Node.js are a mechanism for utilizing the capabilities of multi-core
    - Clusters support IPC mechanisms that allow communication between the master process and worker processes.
    - IPC enables data sharing, coordination of tasks, and exchange of messages between different parts of the application.
 
-  ---
+---
+
+# Streams
+
+Streams in Node.js are a powerful concept for handling data efficiently, especially when dealing with large datasets or when data is being processed asynchronously. They allow you to work with data in a way that doesn't require holding the entire dataset in memory, which is beneficial for performance and resource optimization.
+
+## Key Concepts
+
+1. **Types of Streams:**
+   - **Readable Streams:** Allow you to read data sequentially from a source.
+   - **Writable Streams:** Allow you to write data sequentially to a destination.
+   - **Duplex Streams:** Represent both a readable and writable side.
+   - **Transform Streams:** Special type of duplex stream for data transformation.
+
+2. **Working with Readable Streams:**
+   - Readable streams allow you to read data from sources like files, HTTP requests, or network sockets.
+   - Example: Reading a file using a readable stream.
+    
+3. **Working with Writable Streams:**
+   - Writable streams allow you to write data to destinations like files, HTTP responses, or network sockets.
+   - Example: Writing to a file using a writable stream.
+
+4. **Piping Streams:**
+   - Piping allows you to connect a readable stream to a writable stream, transferring data automatically.
+   - Example: Piping a readable stream to a writable stream.
+
+5. **Transform Streams:**
+   - Transform streams allow data modification as it passes through the stream, useful for tasks like compression or data encryption.
+   - Example: Uppercasing data using a transform stream.
+
+Streams in Node.js are fundamental for handling data efficiently, enabling developers to process data in chunks rather than loading entire datasets into memory.
+
+---
