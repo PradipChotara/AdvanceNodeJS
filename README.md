@@ -26,3 +26,27 @@ npm install
 > by sharing memory refrences or by passing data.
 
 ---
+
+# Clusters in Node.js
+
+Clusters in Node.js are a mechanism for utilizing the capabilities of multi-core systems to improve performance and concurrency in applications. They enable the creation of multiple child processes (workers) that share the same server port, allowing Node.js to handle more incoming connections and distribute the workload across CPU cores effectively.
+
+## Key Concepts
+
+1. **Master-Worker Model:**
+   - Clusters follow a master-worker model, where the main Node.js process (master) manages multiple child worker processes.
+   - Each worker process runs its own instance of the Node.js event loop and can handle incoming requests independently.
+
+2. **Scaling Across CPU Cores:**
+   - Clusters are designed to scale Node.js applications across multiple CPU cores, utilizing the full processing power of the system.
+   - This scalability is crucial for handling a large number of concurrent connections or performing CPU-intensive tasks efficiently.
+
+3. **Load Balancing:**
+   - The master process in a cluster manages load balancing by distributing incoming connections (HTTP requests, for example) among worker processes.
+   - This helps in evenly distributing the workload and optimizing resource utilization.
+
+4. **Inter-Process Communication (IPC):**
+   - Clusters support IPC mechanisms that allow communication between the master process and worker processes.
+   - IPC enables data sharing, coordination of tasks, and exchange of messages between different parts of the application.
+
+  ---
