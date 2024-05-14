@@ -7,6 +7,7 @@ npm install
 ```
 ---
 ## Worker Threads
+ - can run on diffrent CPU core then main thread
 
 ## - What is The use of Worker Threads?
 - to handle CPU Intensive Task like Encrption/Decrption, Compress/Decompress of Data
