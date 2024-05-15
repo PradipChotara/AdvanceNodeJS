@@ -7,7 +7,7 @@ npm install
 ```
 ---
 
-## Worker Threads
+# Worker Threads
  - can run on diffrent CPU core then main thread
 
 ## - What is The use of Worker Threads?
